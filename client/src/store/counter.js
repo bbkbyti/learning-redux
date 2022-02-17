@@ -1,10 +1,12 @@
 
+
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialCounterState = { counter: 0, showCounter: true}
 
 const counterSlice = createSlice({
     name: 'counter',
-    initialState: { counter: 0 },
+    initialState: initialCounterState,
     reducers: {
         increment(state) {
             state.counter++;
