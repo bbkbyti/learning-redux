@@ -26,6 +26,10 @@ export default function Counter() {
         dispatch(counterActions.increase(5));
     }
 
+    const resetHandler = () => {
+        dispatch(counterActions.resetCounter());
+    }
+    
     return (
         <main className={classes.counter}>
             <h1>Counter(Redux)</h1>
@@ -34,6 +38,7 @@ export default function Counter() {
                 <button onClick={incrementHandler}>Increment</button>
                 <button onClick={decrementHandler}>Decrement</button>
                 <button onClick={increaseHandler}>Increase by 5</button>
+                <button onClick={resetHandler} >Reset Counter</button>
                 <button onClick={toggleHandler}>Toggle Counter</button>
             </div>
         </main>
